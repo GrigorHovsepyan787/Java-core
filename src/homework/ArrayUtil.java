@@ -2,7 +2,7 @@ package homework;
 
 public class ArrayUtil {
     public static void main(String[] args) {
-        int [] nums = {1,6,3,9,15,52,-3,5,8};
+        int[] nums = {1, 6, 3, 9, 15, 52, -3, 5, 8};
         int min = nums[0];
         int oddNums = 0;
         int evenNums = 0;
@@ -23,32 +23,29 @@ public class ArrayUtil {
         System.out.println("4. The length of array equals - " + nums.length + "\n");
         // task 5
         for (int i = 1; i < nums.length; i++) {
-            if(min > nums[i]){
+            if (min > nums[i]) {
                 min = nums[i];
             }
         }
         System.out.println("5. Minimal value of array equals - " + min + "\n");
         // task 6
-        if(nums.length <= 2){
+        if (nums.length <= 2) {
             System.out.println("6. Can't print middle values." + "\n");
-        }
-        else{
-            if(nums.length % 2 == 0){
-                System.out.print("6. Middle values for array equal - " + nums[nums.length/2 - 1] + " ");
-                System.out.println(nums[nums.length/2] + "\n");
+        } else {
+            if (nums.length % 2 == 0) {
+                System.out.print("6. Middle values for array equal - " + nums[nums.length / 2 - 1] + " ");
+                System.out.println(nums[nums.length / 2] + "\n");
 
-            }
-            else{
+            } else {
                 System.out.println("6. Middle value for array equals - " + nums[nums.length / 2] + "\n");
             }
         }
         //task 7
         for (int i = 0; i < nums.length; i++) {
 
-            if(nums[i] % 2 == 1){
+            if (nums[i] % 2 == 1) {
                 oddNums++;
-            }
-            else {
+            } else {
                 evenNums++;
             }
         }
@@ -57,7 +54,7 @@ public class ArrayUtil {
         System.out.println("8. Quantity of odd numbers in array equal - " + oddNums + "\n");
         //task 9
         for (int i = 0; i < nums.length; i++) {
-            sum+= nums[i];
+            sum += nums[i];
         }
         System.out.println("9. The sum of array elements equal - " + sum + "\n");
         // task 10
