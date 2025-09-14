@@ -44,10 +44,8 @@ public class ArrayUtil {
         }
         //task 7
         for (int i = 0; i < nums.length; i++) {
-            if(nums[i] == 0){ // Զուտ ուզեցել էի 0-ի դեպքով է անցնեի, բայց չենք անցել continue-ն։
-                continue;
-            }
-            else if(nums[i] % 2 == 1){
+
+            if(nums[i] % 2 == 1){
                 oddNums++;
             }
             else {
