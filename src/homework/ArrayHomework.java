@@ -8,6 +8,7 @@ public class ArrayHomework {
         int n = 6;
         int equals = 0;
         int sumD = 0;
+        int[] equal = new int[nums.length];
         String text = "բարևաշխարհ";
         char[] chars = text.toCharArray();
         String textD = "աէըիօւ"; // ու-ն ուրիշ ձևվի 2 սիմվոլ է
@@ -28,12 +29,12 @@ public class ArrayHomework {
         System.out.println();
 
         //Task 3
+        for (int i : nums) {
+            equal[i]++;
+        }
         for (int i = 0; i < nums.length; i++) {
-            for (int j = 0; j < nums.length; j++) {
-                if (nums[i] == nums[j] && i != j) {
-                    equals++;
-                    break;
-                }
+            if (equal[i] > 1) {
+                equals++;
             }
         }
         System.out.println("The quantity of equals in array is - " + equals);
