@@ -1,8 +1,6 @@
 package homework;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class Sort {
     public static void main(String[] args) {
@@ -14,7 +12,7 @@ public class Sort {
     }
 
     public static void bubble(int[] nums) {
-        int temp = 0;
+        int temp;
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = 0; j < nums.length - 1 - i; j++) {
                 if (nums[j] > nums[j + 1]) {
@@ -46,7 +44,8 @@ public class Sort {
         }
         System.out.println();
     }
-    public static void quick(int[]nums){
+
+    public static void quick(int[] nums) {
         Arrays.stream(nums).sorted(); // stream api-ով է որոշեցի գրել, ավելի օպտիմիզացված ու հեշտ ձևը
         for (int num : nums) {
             System.out.print(num + " ");
