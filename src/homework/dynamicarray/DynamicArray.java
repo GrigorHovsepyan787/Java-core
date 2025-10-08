@@ -63,7 +63,9 @@ public class DynamicArray {
         } else {
             int temp;
             temp = array[array.length - 1];
-            extend();
+            if (size > array.length - 1) {
+                extend();
+            }
             for (int i = array.length - 1; i >= index + 1; i--) {
                 array[i] = temp;
                 if (i - 2 < 0) break;
