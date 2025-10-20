@@ -1,6 +1,5 @@
 package homework.library;
 
-import java.util.Stack;
 
 public class BookStorage {
     private Book[] books = new Book[0];

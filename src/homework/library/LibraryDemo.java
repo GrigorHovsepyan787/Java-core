@@ -1,6 +1,5 @@
 package homework.library;
 
-import javax.imageio.plugins.tiff.ExifTIFFTagSet;
 import java.util.Scanner;
 
 public class LibraryDemo implements Commands {
