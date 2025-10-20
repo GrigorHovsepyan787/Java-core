@@ -47,7 +47,7 @@ public class BookStorage {
         return books[maxInd];
     }
     public void deleteByIndex(int index) {
-        if (index > books.length - 1) {
+        if (index > books.length - 1 || index < 0) {
             System.out.println("Index doesn't have a book");
         } else {
             Book[] tmp = new Book[books.length - 1];
