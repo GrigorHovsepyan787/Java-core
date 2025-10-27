@@ -39,7 +39,14 @@ public class EmployeeStorage {
             System.out.println("Couldn't find any employee by this ID");
         }
     }
-
+    public boolean isIdBusy(String id){
+        for (Employee employee : employees) {
+            if(employee.getEmployeeId().equals(id)){
+                return true;
+            }
+        }
+        return false;
+    }
     public void searchByComName(String keyword) {
         boolean isTrue = false;
         for (Employee employee : employees) {

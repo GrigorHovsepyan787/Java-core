@@ -29,15 +29,20 @@ public class EmployeeDemo implements CommandsEmp {
         String employeeSurname = scan.nextLine();
         System.out.println("Input employee ID");
         String employeeID = scan.nextLine();
-        System.out.println("Input employee salary");
-        Double employeeSalary = scan.nextDouble();
-        System.out.println("Input the company of employee");
-        String employeeCom = scan.nextLine();
-        System.out.println("Input employee position");
-        String employeePos = scan.nextLine();
-        Employee emp = new Employee(employeeName, employeeSurname, employeeID, employeeSalary, employeeCom, employeePos);
-        employeeStorage.add(emp);
-        System.out.println("Employee has been successfully added!");
+        if(!employeeStorage.isIdBusy(employeeID)) {
+            System.out.println("Input employee salary");
+            Double employeeSalary = scan.nextDouble();
+            System.out.println("Input the company of employee");
+            String employeeCom = scan.nextLine();
+            System.out.println("Input employee position");
+            String employeePos = scan.nextLine();
+            Employee emp = new Employee(employeeName, employeeSurname, employeeID, employeeSalary, employeeCom, employeePos);
+            employeeStorage.add(emp);
+            System.out.println("Employee has been successfully added!");
+        }
+        else{
+            System.out.println("Id is already busy!");
+        }
     }
 
     private static void printAllEmployee() {
