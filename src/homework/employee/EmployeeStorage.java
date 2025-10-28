@@ -48,14 +48,14 @@ public class EmployeeStorage {
         return false;
     }
     public void searchByComName(String keyword) {
-        boolean isTrue = false;
+        boolean found = false;
         for (Employee employee : employees) {
             if (employee.getCompany().equalsIgnoreCase(keyword)) {
-                isTrue = true;
+                found = true;
                 System.out.println(employee);
             }
         }
-        if (!isTrue) {
+        if (!found) {
             System.out.println("Couldn't find any employee of this company");
         }
     }
