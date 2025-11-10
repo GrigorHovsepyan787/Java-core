@@ -204,6 +204,10 @@ public class MedCenterDemo implements CommandsMed {
             }
             System.out.println("Input Patient Doctors id");
             int docId = scan.nextInt();
+            if(doctorStorage.searchById(docId) == null){
+                System.err.println("Couldn't find Doctor with that id");
+                return;
+            }
             Date date = new Date();
             Patient patient = new Patient(id, name, surname, number, doctorStorage.searchById(docId), date);
             patientStorage.add(patient);
