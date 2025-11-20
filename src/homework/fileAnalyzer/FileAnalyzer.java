@@ -10,7 +10,6 @@ public class FileAnalyzer {
     static public Map<String, Integer> wordMap(String path) throws IOException {
         Map<String, Integer> map = new HashMap<>();
         try (FileReader reader = new FileReader(path)) {
-
             int i;
             StringBuilder temp = new StringBuilder();
             while ((i = reader.read()) != -1) {
@@ -49,7 +48,7 @@ public class FileAnalyzer {
         int count = 0;
         Map<String, Integer> map = wordMap(path);
         for (String s : map.keySet()) {
-            if(map.get(s) == 1){
+            if (map.get(s) == 1) {
                 count++;
             }
         }
@@ -62,7 +61,7 @@ public class FileAnalyzer {
         for (String s : map.keySet()) {
             treeMap.put(map.get(s), s);
         }
-        for (int i = 0; i < treeMap.size()-n; i++) {
+        for (int i = 0; i < treeMap.size() - n; i++) {
             treeMap.remove(treeMap.firstKey());
         }
         return treeMap.reversed();
@@ -72,7 +71,7 @@ public class FileAnalyzer {
         int count = 0;
         Map<String, Integer> map = wordMap(path);
         for (String s : map.keySet()) {
-            if(s.equals(word.toLowerCase())){
+            if (s.equals(word.toLowerCase())) {
                 count += map.get(s);
             }
         }
